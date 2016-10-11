@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'teste/home'
+
   get 'home/index'
 
   get 'home/index'
