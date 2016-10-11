@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :representantes
   get 'teste/home'
 
   get 'home/index'

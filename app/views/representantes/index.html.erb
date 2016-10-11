@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Representantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Responsavel</th>
+      <th>Nome fantasia</th>
+      <th>Cpf cnpj</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Cep</th>
+      <th>Endereco</th>
+      <th>Logradouro</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @representantes.each do |representante| %>
+      <tr>
+        <td><%= representante.responsavel %></td>
+        <td><%= representante.nome_fantasia %></td>
+        <td><%= representante.cpf_cnpj %></td>
+        <td><%= representante.telefone %></td>
+        <td><%= representante.email %></td>
+        <td><%= representante.cep %></td>
+        <td><%= representante.endereco %></td>
+        <td><%= representante.logradouro %></td>
+        <td><%= representante.bairro %></td>
+        <td><%= representante.cidade %></td>
+        <td><%= representante.estado %></td>
+        <td><%= representante.status %></td>
+        <td><%= link_to 'Show', representante %></td>
+        <td><%= link_to 'Edit', edit_representante_path(representante) %></td>
+        <td><%= link_to 'Destroy', representante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Representante', new_representante_path %>
