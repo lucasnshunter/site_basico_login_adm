@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :zonas
   resources :representantes
   get 'teste/home'
 

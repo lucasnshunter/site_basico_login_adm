@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'foreigner'
 #gem devise para autenticação
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

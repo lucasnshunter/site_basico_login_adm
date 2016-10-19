@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cidade: MyString
+  estado: MyString
+  representante_id: 1
+
+two:
+  cidade: MyString
+  estado: MyString
+  representante_id: 1
