@@ -1,64 +1,86 @@
 <p id="notice"><%= notice %></p>
+<center>
+    <div class="panel panel-primary">
+         <div class="panel-heading">
+            <h3 class="panel-title">Usuario Criado</h3>
+         </div>
+         <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                     <tr>
+                        <td>Nome Fantasia</td>
+                        <td>Responsavel</td>
+                        <td>CPF/CNPJ</td>
+                        <td>Telefone</td>
+                        <td>Email</td>
+                     </tr>
+                </thead>
+                
+                <tbody>
+                     <tr>
+                        <td><%= @representante.nome_fantasia %></td>
+                        <td><%= @representante.responsavel %></td>
+                        <td> <%= @representante.cpf_cnpj %></td>
+                        <td><%= @representante.telefone %></td>
+                         <td><%= @representante.email %></td>
+                
+                </body>  
+                </table>
+                <table class="table table-hover">
+                <thead>
+                     <tr>
+                        
+                        <td>CEP</td>
+                        <td>Endereço</td>
+                        <td>Logradouro</td>
+                        <td>Bairro</td>
+                        <td>Cidade</td>
+                        <td>Estado</td>
+                     </tr>
+                </thead>
+              
+                <tbody>
+                     <tr> 
+                        <td><%= @representante.cep %></td>
+                        <td><%= @representante.logradouro %></td>
+                        <td><%= @representante.logradouro %></td>
+                        <td><%= @representante.bairro %></td>
+                        <td><%= @representante.cidade %></td>
+                        <td><%= @representante.estado %></td>
+                        <td></td>
+                 </body>
+               
+                  
+                </table>
+                
+                
+               
+                  
+                <table class="table table-hover">
+                
+                <thead>
+                     <tr>
+                       
+                       
+                        <td>
+                           <button type="submit" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i><%= link_to 'Editar', edit_representante_path(@representante) %></button>
+                            
+                        </td>
+                    
+                        <td>
+                           <button type="submit" class="btn btn-danger"><i class="fa fa-eye" aria-hidden="true"></i><%= link_to 'Destroy', @representante, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                          
+                        </td>
+                       
 
-<p>
-  <strong>Responsavel:</strong>
-  <%= @representante.responsavel %>
-</p>
+                    </tr>
+                </thead>
+                
+               
+                </table>
 
-<p>
-  <strong>Nome fantasia:</strong>
-  <%= @representante.nome_fantasia %>
-</p>
+        </div>
+     </div>
 
-<p>
-  <strong>Cpf cnpj:</strong>
-  <%= @representante.cpf_cnpj %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @representante.telefone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @representante.email %>
-</p>
-
-<p>
-  <strong>Cep:</strong>
-  <%= @representante.cep %>
-</p>
-
-<p>
-  <strong>Endereco:</strong>
-  <%= @representante.endereco %>
-</p>
-
-<p>
-  <strong>Logradouro:</strong>
-  <%= @representante.logradouro %>
-</p>
-
-<p>
-  <strong>Bairro:</strong>
-  <%= @representante.bairro %>
-</p>
-
-<p>
-  <strong>Cidade:</strong>
-  <%= @representante.cidade %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @representante.estado %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @representante.status %>
-</p>
-
-<%= link_to 'Edit', edit_representante_path(@representante) %> |
-<%= link_to 'Back', representantes_path %>
+    </panel>
+</center>

@@ -1,4 +1,6 @@
-<%= form_for(@representante) do |f| %>
+
+<form class="form-inline">
+  <%= form_for(@representante) do |f| %>
   <% if @representante.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@representante.errors.count, "error") %> prohibited this representante from being saved:</h2>
@@ -11,55 +13,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :responsavel %><br>
-    <%= f.text_field :responsavel %>
-  </div>
-  <div class="field">
-    <%= f.label :nome_fantasia %><br>
-    <%= f.text_field :nome_fantasia %>
-  </div>
-  <div class="field">
-    <%= f.label :cpf_cnpj %><br>
-    <%= f.text_field :cpf_cnpj %>
-  </div>
-  <div class="field">
-    <%= f.label :telefone %><br>
-    <%= f.text_field :telefone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :cep %><br>
-    <%= f.text_field :cep %>
-  </div>
-  <div class="field">
-    <%= f.label :endereco %><br>
-    <%= f.text_field :endereco %>
-  </div>
-  <div class="field">
-    <%= f.label :logradouro %><br>
-    <%= f.text_field :logradouro %>
-  </div>
-  <div class="field">
-    <%= f.label :bairro %><br>
-    <%= f.text_field :bairro %>
-  </div>
-  <div class="field">
-    <%= f.label :cidade %><br>
-    <%= f.text_field :cidade %>
-  </div>
-  <div class="field">
-    <%= f.label :estado %><br>
-    <%= f.text_field :estado %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div>
+
+  
+  
+  <table class="table table-striped">
+<thead>
+  <tr>
+    <td>Responsavel</td>
+    <td>Nome fantasia</td>
+    <td>Cpf/Cnpj</td>
+    <td>Telefone</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= f.text_field :responsavel ,class:"form-control" %></td>
+    <td><%= f.text_field :nome_fantasia ,class:"form-control" %></td>
+    <td><%= f.text_field :cpf_cnpj ,class:"form-control" %></td>
+    <td><%= f.text_field :telefone ,class:"form-control" %></td>
+  </tr>
+  
+</tbody>
+</table>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <td>Email</td>
+    <td>Cep</td>
+    <td>Endereço</td>
+    <td>Logradouro</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= f.text_field :email ,class:"form-control" %></td>
+    <td><%= f.text_field :cep ,class:"form-control" %></td>
+    <td><%= f.text_field :endereco ,class:"form-control" %></td>
+    <td><%= f.text_field :logradouro ,class:"form-control" %></td>
+  </tr>
+  
+</tbody>
+</table>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <td>Bairro</td>
+    <td>Cidade</td>
+    <td>Estado</td>
+    <td>Status</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= f.text_field :bairro ,class:"form-control" %></td>
+    <td><%= f.text_field :cidade ,class:"form-control" %></td>
+    <td><%= f.text_field :estado ,class:"form-control" %></td>
+    <td><%= f.text_field :status ,class:"form-control" %></td>
+  </tr>
+  
+</tbody>
+</table>
   <div class="actions">
     <%= f.submit %>
+    
+    
   </div>
 <% end %>
+<br>
+</form>
+
